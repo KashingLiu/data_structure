@@ -26,8 +26,8 @@ public:
 //      _size = 0;}                          //实际长度是0
 
     T& operator[] ( Rank r );    //这是重载[]运算符，通过下标访问值的函数，其中的函数体只能在.h文件里写
-//    s为规模，v为初始化成什么值
-    Vector(int c = DEFAULT_CAPACITY, int s = 0, T v = 0)
+
+    Vector(int c = DEFAULT_CAPACITY, int s = 0, T v = 0)     //    s为规模，v为初始化成什么值
     {
         _elem = new T[_capacity = c];
         for ( _size = 0; _size < s; _elem[_size++] = v );
@@ -49,7 +49,7 @@ public:
     {
         delete [] _elem;
     }
-    int insert(int r, T const&e);
+    int insert(int r, T const& e);
 };
 
 
