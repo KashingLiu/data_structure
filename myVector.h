@@ -50,6 +50,7 @@ public:
         delete [] _elem;
     }
     int insert(int r, T const& e);
+    int remove(int lo, int hi);
 };
 
 
@@ -58,6 +59,6 @@ public:
 #include "vector_insert.h"
 #include "vector_expand.h"
 #include "vector_copyfrom.h"
-
+#include "vector_remove.h"
 
 #endif //DATA_STRUCTURE_MYVECTOR_H
