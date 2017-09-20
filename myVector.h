@@ -52,6 +52,7 @@ public:
     }
     int insert(int r, T const& e);
     int remove(int lo, int hi);
+    void print();
 };
 
 
@@ -62,5 +63,6 @@ public:
 #include "vector_copyfrom.h"
 #include "vector_remove.h"
 #include "vector_shrink.h"
+#include "vector_print.h"
 
 #endif //DATA_STRUCTURE_MYVECTOR_H

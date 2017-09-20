@@ -4,8 +4,13 @@
 using namespace std;
 int main() {
     Vector<int> a(12,12,0);
-    int b[3] = {1,2,3};
-    a.insert(2, b[2]);
-    cout << a[2] << endl;
+    for (int i = 0; i < 12; ++i) {
+        a[i] = i+1;
+    }
+    a.print();
+    a.insert(2, 5);
+    a.print();
+    a.remove(2,4);
+    a.print();
     return 0;
 }
