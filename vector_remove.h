@@ -19,4 +19,11 @@ int Vector<T>::remove(int lo, int hi) {
     return hi - lo;         //返回的是被删除元素的个数
 }
 
+template <typename T>
+int Vector<T>::remove(Rank r) {
+    T e = _elem[r];
+    remove(r, r+1);
+    return e;
+}
+
 #endif //DATA_STRUCTURE_VECTOR_DELETE_H

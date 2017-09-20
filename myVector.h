@@ -52,6 +52,7 @@ public:
     }
     int insert(int r, T const& e);
     int remove(int lo, int hi);
+    int remove(Rank r);
     void print();
 };
 
