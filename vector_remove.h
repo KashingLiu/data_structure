@@ -14,7 +14,9 @@ int Vector<T>::remove(int lo, int hi) {
     while ( hi < _size) {
         _elem[lo++] = _elem[hi++];
     }
-
+    _size = lo;
+    shrink();
+    return hi - lo;         //返回的是被删除元素的个数
 }
 
 #endif //DATA_STRUCTURE_VECTOR_DELETE_H

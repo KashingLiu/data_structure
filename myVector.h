@@ -19,6 +19,7 @@ private:
 protected:
     void copyFrom(T const* A, Rank lo, Rank hi);
     void expand();
+    void shrink();
 public:
 //    //默认初始化//这个构造函数与下面那个不能同时使用，但是鉴于下面那个可以描述第一个，所以只用第二个了
 //    Vector(int c)        //指定初始的容量，若未指定则为DEFAULT_CAPACITY
@@ -60,5 +61,6 @@ public:
 #include "vector_expand.h"
 #include "vector_copyfrom.h"
 #include "vector_remove.h"
+#include "vector_shrink.h"
 
 #endif //DATA_STRUCTURE_MYVECTOR_H
