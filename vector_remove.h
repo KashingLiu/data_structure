@@ -25,5 +25,6 @@ int Vector<T>::remove(Rank r) {
     remove(r, r+1);
     return e;
 }
+//这是先实现了对多个元素的删除，在此基础上删除一个元素，而如果先删除一个，再在此基础上重复hi-lo次也是可行的，但前者时间复杂度为O(N)，后者时间复杂度为O(N^2)
 
 #endif //DATA_STRUCTURE_VECTOR_DELETE_H
