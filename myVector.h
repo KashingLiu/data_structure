@@ -58,7 +58,7 @@ public:
     int remove(Rank r);
     void print();
     Rank find(T const& e, Rank lo, Rank hi);
-
+    int deduplicate();
 };
 
 
@@ -70,5 +70,6 @@ public:
 #include "vector_shrink.h"
 #include "vector_print.h"
 #include "vector_find.h"
+#include "vector_deduplicate.h"
 
 #endif //DATA_STRUCTURE_MYVECTOR_H
