@@ -13,8 +13,8 @@ template <typename T>       //定义了一个模板类，模板的类型名称�
 class Vector
 {
 private:
-    Rank _size;         //向量的规模，向量的内部实际一共有多少个元素，也即实际规模，_表示私有
-    int _capacity;      //向量的容量，不一定和size相同，有可能比实际的规模稍微大一些
+    Rank _size{};         //向量的规模，向量的内部实际一共有多少个元素，也即实际规模，_表示私有
+    int _capacity{};      //向量的容量，不一定和size相同，有可能比实际的规模稍微大一些
     T* _elem;           //记录数据用的
 protected:
     void copyFrom(T const* A, Rank lo, Rank hi);
@@ -28,7 +28,10 @@ public:
 
     T& operator[] ( Rank r );    //这是重载[]运算符，通过下标访问值的函数，其中的函数体只能在.h文件里写
 
-    Vector(int c = DEFAULT_CAPACITY, int s = 0, T v = 0)     //    s为规模，v为初始化成什么值
+    //    s为规模，v为初始化成什么值
+    //explicit作用是防止隐式自动转换
+    //所谓隐式自动转换就是：将该构造函数对应数据类型的数据转换为该类对象
+    explicit Vector(int c = DEFAULT_CAPACITY, int s = 0, T v = 0)
     {
         _elem = new T[_capacity = c];
         for ( _size = 0; _size < s; _elem[_size++] = v );
@@ -55,6 +58,7 @@ public:
     int remove(Rank r);
     void print();
     Rank find(T const& e, Rank lo, Rank hi);
+
 };
 
 

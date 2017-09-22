@@ -19,4 +19,6 @@ void Vector<T>::shrink() {
     }
     delete [] oldelem;
 }
+
+
 #endif //DATA_STRUCTURE_VECTOR_SHRINK_H
