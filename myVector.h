@@ -58,7 +58,6 @@ public:
 };
 
 
-
 #include "vector_call_by_rank.h"
 #include "vector_insert.h"
 #include "vector_expand.h"
