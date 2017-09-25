@@ -13,8 +13,8 @@ template <typename T>       //定义了一个模板类，模板的类型名称�
 class Vector
 {
 private:
-    Rank _size{};         //向量的规模，向量的内部实际一共有多少个元素，也即实际规模，_表示私有
-    int _capacity{};      //向量的容量，不一定和size相同，有可能比实际的规模稍微大一些
+    Rank _size;         //向量的规模，向量的内部实际一共有多少个元素，也即实际规模，_表示私有
+    int _capacity;      //向量的容量，不一定和size相同，有可能比实际的规模稍微大一些
     T* _elem;           //记录数据用的
 protected:
     void copyFrom(T const* A, Rank lo, Rank hi);
